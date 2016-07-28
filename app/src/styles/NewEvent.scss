@@ -1,0 +1,33 @@
+
+@import "./Event.scss";
+
+.newEvent {
+  @extend .event;
+  .dateTime {
+    // placeholder: No styling here yet
+  }
+  input {
+    margin-right: 4px;
+    flex: 2;
+    border: none;
+
+    // https://css-tricks.com/ordering-css3-properties/
+    &::-webkit-input-placeholder {
+      font-style: italic;
+    }
+    &::-moz-placeholder {
+      font-style: italics;
+    }
+    &::-ms-input-placeholder {
+      font-style: italics; 
+    }
+    &[type="text"] {
+      // placeholder: No styling here yet
+    }
+
+  }
+  button {
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}

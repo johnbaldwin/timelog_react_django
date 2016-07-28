@@ -1,0 +1,19 @@
+.event {
+  background-color: rgb(255,255,255);
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  margin: 3px 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  .dateTime {
+  	flex: 1;
+    padding: 3px 10px;
+  }
+  .text {
+    display: flex;
+  	flex: 2;
+    align-items: center;
+  }
+}
