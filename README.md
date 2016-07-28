@@ -110,6 +110,7 @@ Open a terminal and navigate to this project's api/django directory
 
 
 Set up the SQLite development database by running the following:
+
 ```python manage.py migrate```
 
 #### Running the Django API server
