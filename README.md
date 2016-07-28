@@ -7,10 +7,6 @@ line timestamped log entries.
 The purpose of this project is to provide a simple working example of a [React](https://facebook.github.io/react/)
 web application that communicates with an API server implented in [Django](https://www.djangoproject.com).
 
-Features
---------
-
-
 Components Overview
 -------------------
 
@@ -29,15 +25,15 @@ server and allows the user to add new entries, one at a time.
 * The initial app was generated using [Yeoman](http://yeoman.io/) and the [react-webpack-alt](https://github.com/weblogixx/generator-react-webpack-alt) generator
 * JavaScript is predominantly ECMAScript 2015 (aka ES6)
 * SCSS is used for the stylesheets
-** Flexbox is used for the layout
-* USes
+  * Flexbox is used for the layout
+* Uses [Alt.js](http://alt.js.org/) to implement the [Flux](https://facebook.github.io/flux/) pattern
 
 #### Resources and Starting Points
 
 * [Alt.js](http://alt.js.org/)
 * [Babel JavaScript Compiler](https://babeljs.io/)
 * [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [Flux](https://facebook.github.io/react/blog/2014/05/06/flux.html)
+* [Flux](https://facebook.github.io/flux/)
 * [React](https://facebook.github.io/react/index.html)
 * [SCSS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 * [Webpack](https://webpack.github.io/)
@@ -57,10 +53,6 @@ If there are no objects, then an empty array is returned.
 
 
 To add an event, do a ```POST``` call on the endpoint, passing a JSON object with two keys: 'text' and 'ts'. The former contains the event log text and the later
-
-example:
-
-
 
 
 ### Resources
@@ -101,7 +93,7 @@ This example uses the webpack development server to serve up the React app. The 
 This will start the app server at [http://localhost:8000/webpack-dev-server/](http://localhost:8000/webpack-dev-server/)
 
 
-Type ```Ctrl-C``` to stop the dev server
+Type ```Ctrl-C``` to stop the dev server.
 
 ### Django API Server
 
@@ -117,6 +109,7 @@ Open a terminal and navigate to this project's api/django directory
 ```pip install -r requirements.txt```
 
 
+Set up the SQLite development database by running the following:
 ```python manage.py migrate```
 
 #### Running the Django API server
@@ -126,10 +119,21 @@ start the development server on port 5000. This is because the React app expects
 ```python manage.py runserver 5000```
 
 
-Type ```Ctrl-C``` to stop the dev server
+Type ```Ctrl-C``` to stop the dev server.
+
+
+What's Next?
+------------
+* Add support for HTTPS
+* Add authentication example(s)
+* Integrate the React app build with the Django server, so it can be run from one server
+* Add tests 
+* Add Django REST Framework example
+* Demonstrate options for managing styles
+
 
 Additional Resources
 --------------------
 
 * [Cross Origin Resource Sharing (CORS) W3C recommendation](https://www.w3.org/TR/cors/)
-* [enable-cors.org](http://enable-cors.org/) Resource site hosted by the authors of the CORS in action book.
+* [enable-cors.org](http://enable-cors.org/) Resource site hosted by the authors of the _CORS in action book_.
